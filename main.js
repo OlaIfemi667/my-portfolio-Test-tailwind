@@ -1,42 +1,51 @@
 
-
 function startupage(){
-  console.log('startUpPage');
-  const startUpPage = document.querySelector('body');
-  startUpPage.classList.add('press-start-2p-regular')
-  const startUpHeader = document.querySelector('header');
-  const startUpHeaderContent = document.createElement('p');
-  const startUpHeaderContentChild  = document.createElement('span');
-  startUpHeaderContentChild.classList.add('blink_me');
-  startUpHeaderContentChild.textContent = ' ola-iya ~ <3 '
-  const startUpHeaderContentChild2  = document.createElement('span');
-  startUpHeaderContentChild2.textContent = ' sudo chilling '
-  
-  startUpHeaderContent.appendChild(startUpHeaderContentChild);
-  startUpHeaderContent.appendChild(startUpHeaderContentChild2);
-  startUpHeader.appendChild(startUpHeaderContent);
-
-  
-  const startUpButton = document.createElement('button');
-  startUpButton.classList.add('startUpButton');
-  startUpButton.classList.add('press-start-2p-regular');
-  
-  startUpButton.textContent = 'START';
-
-  const main = document.querySelector('section');
-  main.appendChild(startUpButton);
-  startUpButton.addEventListener('click', () => {
-    startUpButton.disabled = true;
-    startUpHeader.classList.add('fade-out');
-    startUpButton.classList.add('fade-out');
-    setTimeout(() => {
-      startUpButton.remove();
-      startUpHeaderContent.remove();
-      loadMainPage();
-    }, 500);
+  if (document.cookie === '') {
+    console.log('startUpPage');
+    const startUpPage = document.querySelector('body');
+    startUpPage.classList.add('press-start-2p-regular')
+    const startUpHeader = document.querySelector('header');
+    const startUpHeaderContent = document.createElement('p');
+    const startUpHeaderContentChild  = document.createElement('span');
+    startUpHeaderContentChild.classList.add('blink_me');
+    startUpHeaderContentChild.textContent = ' ola-iya ~ <3 '
+    const startUpHeaderContentChild2  = document.createElement('span');
+    startUpHeaderContentChild2.textContent = ' sudo chilling '
     
-  });
-  
+    startUpHeaderContent.appendChild(startUpHeaderContentChild);
+    startUpHeaderContent.appendChild(startUpHeaderContentChild2);
+    startUpHeader.appendChild(startUpHeaderContent);
+
+    
+    const startUpButton = document.createElement('button');
+    startUpButton.classList.add('startUpButton');
+    startUpButton.classList.add('press-start-2p-regular');
+    
+    startUpButton.textContent = 'START';
+
+    const main = document.querySelector('section');
+    main.appendChild(startUpButton);
+    startUpButton.addEventListener('click', () => {
+      document.cookie = "started = true;"
+      startUpButton.disabled = true;
+      startUpHeader.classList.add('fade-out');
+      startUpButton.classList.add('fade-out');
+      setTimeout(() => {
+        startUpButton.remove();
+        startUpHeaderContent.remove();
+        loadMainPage();
+      }, 500);
+      
+    });
+  }
+  else{
+    console.log('loadMainPage');
+    const startUpPage = document.querySelector('body');
+    startUpPage.classList.add('press-start-2p-regular')
+    const startUpHeader = document.querySelector('header');
+    startUpHeader.classList.add('fade-out');
+    loadMainPage();
+  }
 }
 
 function loadMainPage() {
