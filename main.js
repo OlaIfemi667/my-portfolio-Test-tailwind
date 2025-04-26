@@ -55,6 +55,7 @@ function loadMainPage() {
     a.classList.add('navlink')
     a.href = `#${tabName.toLowerCase()}`;
     a.textContent = tabName;
+    a.style.padding = '10px 20px'
     li.appendChild(a);
     ul.appendChild(li);
   });
