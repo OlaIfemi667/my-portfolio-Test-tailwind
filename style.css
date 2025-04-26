@@ -137,20 +137,21 @@ main section p{
     padding: 10px 20px;
     background-color: white;
     color: black;
+    cursor: pointer;
 
 }
 @media (max-width: 640px){
     *{
-        font-size: .5rem;
+        font-size: .70rem;
     }
     .navbar ul{
-        gap: 20px;
+        gap: 10px;
     }
 }
 
 @media (max-width: 768px){
     *{
-        font-size: 0.75rem;
+        font-size: .9rem;
     }
     .navbar ul{
         gap: 20px;
