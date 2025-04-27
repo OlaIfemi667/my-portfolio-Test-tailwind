@@ -48,12 +48,13 @@ main section h2{
 main{
     display: flex;
     flex-direction: column;
-}
-
-main section{
+    
     height: 60vh;
     width: 50vw;
+    
 }
+
+
 main section p{
     padding: 20px;
 }
@@ -145,19 +146,31 @@ main section p{
 .mylinksDOM{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
-.mylinkItem{
-    padding: 20px;
-    width: fit-content;
 
-}
+
 
 .mylinkItem a{
-    color: #ffffff;
     text-decoration: none;
-    font-size: 8px;
-    transition: color 0.3s, transform 0.3s;
+    display: inline-block; /* important pour bien appliquer transform */
+    align-content: center;
+    background-color: rgb(10, 10, 10);
+    color: #ffffff;
+    padding: 40px 80px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent; /* Prépare la bordure pour éviter un "saut" */
 }
+
+.mylinkItem a:hover {
+    transform: scale(1.05); /* grossit de 5% */
+    border: 2px solid #ffffff;
+}
+
+
 
 
 @media (max-width: 640px){
@@ -167,6 +180,9 @@ main section p{
     .navbar ul{
         gap: 10px;
     }
+    .mylinkItem{
+        padding: 10px;
+    }
 }
 
 @media (max-width: 768px){
@@ -175,6 +191,10 @@ main section p{
     }
     .navbar ul{
         gap: 20px;
+    }
+    .mylinkItem a{
+        height: 100px;
+        width: 100px;
     }
 
 }
