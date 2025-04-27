@@ -51,6 +51,7 @@ function startupage(){
 function LoadMyLinks(){
 
   const contentLink = document.querySelector('.contentLink');
+  contentLink.innerHTML = ''
   const mylinksObect = {
     "GitHub": "https://github.com/OlaIfemi667",
     "LinkedIn": "https://www.linkedin.com/in/jean-de-dieu-bancole-54b65123b/",
@@ -126,6 +127,7 @@ function loadMainPage() {
 }
 
 function whoami(){
+  //cleanup Whoami links
   //cleanup main
   const main = document.querySelector('section');
   main.innerHTML = '';
@@ -153,6 +155,9 @@ function whoami(){
 
 }
 function project(){
+  //cleanup Whoami links
+  const contentLink = document.querySelector('.contentLink');
+  contentLink.innerHTML = ''
   //cleanup main
   const main = document.querySelector('section');
   main.innerHTML = '';
@@ -168,6 +173,9 @@ function project(){
   main.appendChild(projectP);
 }
 function blog(){
+  //cleanup Whoami links
+  const contentLink = document.querySelector('.contentLink');
+  contentLink.innerHTML = ''
   //cleanup main
   const main = document.querySelector('section');
   main.innerHTML = '';
