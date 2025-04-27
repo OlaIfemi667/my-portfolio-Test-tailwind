@@ -68,7 +68,8 @@ function LoadMyLinks(){
     mylink.classList.add('mylinkItem');
     mylinksDOM.classList.add('mylinksDOM');
     mylinksA.textContent = key;
-    mylinksA.href = value;  
+    mylinksA.href = value; 
+    mylinksA.target = '_blank';
 
     mylink.appendChild(mylinksA);
     mylinksDOM.appendChild(mylink);

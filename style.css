@@ -180,8 +180,11 @@ main section p{
     .navbar ul{
         gap: 10px;
     }
-    .mylinkItem{
-        padding: 10px;
+    .mylinkItem a{
+        padding: 5px 10px;
+        font-size: 0.5rem;
+        cursor: pointer;
+        margin: 1px;
     }
 }
 
@@ -193,8 +196,10 @@ main section p{
         gap: 20px;
     }
     .mylinkItem a{
-        height: 100px;
-        width: 100px;
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        cursor: pointer;
+        margin: 1px;
     }
 
 }
