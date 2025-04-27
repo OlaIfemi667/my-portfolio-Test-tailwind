@@ -46,12 +46,13 @@ main section h2{
   }
   
 main{
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 main section{
     height: 60vh;
-    width: 70vw;
+    width: 50vw;
 }
 main section p{
     padding: 20px;
@@ -140,6 +141,25 @@ main section p{
     cursor: pointer;
 
 }
+
+.mylinksDOM{
+    display: flex;
+    flex-direction: row;
+}
+.mylinkItem{
+    padding: 20px;
+    width: fit-content;
+
+}
+
+.mylinkItem a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 8px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+
 @media (max-width: 640px){
     *{
         font-size: .70rem;
@@ -156,4 +176,5 @@ main section p{
     .navbar ul{
         gap: 20px;
     }
+
 }

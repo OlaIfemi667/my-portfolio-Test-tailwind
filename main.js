@@ -48,6 +48,33 @@ function startupage(){
   }
 }
 
+function LoadMyLinks(){
+
+  const contentLink = document.querySelector('.contentLink');
+  const mylinksObect = {
+    "GitHub": "https://github.com/OlaIfemi667",
+    "LinkedIn": "https://www.linkedin.com/in/jean-de-dieu-bancole-54b65123b/",
+    "Gmail": "mailto:bancolejeandedieu@gmail.com",
+    "Twitter": "https://twitter.com/",
+  }
+  const mylinksDOM = document.createElement('div');
+
+  for (const [key, value] of Object.entries(mylinksObect)) {
+    console.log(key, value);
+    const mylink = document.createElement('div');
+    const mylinksA = document.createElement('a');
+    mylinksA.classList.add(key);
+    mylink.classList.add('press-start-2p-regular');
+    mylink.classList.add('mylinkItem');
+    mylinksDOM.classList.add('mylinksDOM');
+    mylinksA.textContent = key;
+    mylinksA.href = value;  
+
+    mylink.appendChild(mylinksA);
+    mylinksDOM.appendChild(mylink);
+  }
+  contentLink.appendChild(mylinksDOM);
+}
 function loadMainPage() {
   const header = document.querySelector('header');
   header.classList.remove('fade-out');
@@ -121,6 +148,7 @@ function whoami(){
   whoHobbiesdiv.appendChild(whoHobbiesP);
   main.appendChild(whoHobbiesdiv);
 
+  LoadMyLinks();
 
 }
 function project(){
