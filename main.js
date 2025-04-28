@@ -23,7 +23,7 @@ function startupage(){
     
     startUpButton.textContent = 'START';
 
-    const main = document.querySelector('section');
+    const main = document.querySelector('main');
     main.appendChild(startUpButton);
     startUpButton.addEventListener('click', () => {
       document.cookie = "started = true;"
@@ -52,6 +52,10 @@ function LoadMyLinks(){
 
   const contentLink = document.querySelector('.contentLink');
   contentLink.innerHTML = ''
+  const mylinksH2 = document.createElement('h6');
+  mylinksH2.classList.add('press-start-2p-regular');
+  mylinksH2.textContent = 'My Links';
+  contentLink.appendChild(mylinksH2);
   const mylinksObect = {
     "GitHub": "https://github.com/OlaIfemi667",
     "LinkedIn": "https://www.linkedin.com/in/jean-de-dieu-bancole-54b65123b/",
@@ -78,6 +82,7 @@ function LoadMyLinks(){
   contentLink.appendChild(mylinksDOM);
 }
 function loadMainPage() {
+  //
   const header = document.querySelector('header');
   header.classList.remove('fade-out');
 
@@ -85,7 +90,7 @@ function loadMainPage() {
   nav.classList.add('navbar');
 
   const ul = document.createElement('ul');
-  const tabs = ['Whoami', 'Project', 'Blog'];
+  const tabs = ['Whoami', 'Projects', 'Blog'];
 
   tabs.forEach(tabName => {
     const li = document.createElement('li');
@@ -93,7 +98,7 @@ function loadMainPage() {
     a.classList.add('navlink')
     a.href = `#${tabName.toLowerCase()}`;
     a.textContent = tabName;
-    a.style.padding = '10px 20px'
+    a.style.padding = ' 20px'
     li.appendChild(a);
     ul.appendChild(li);
   });
@@ -114,7 +119,7 @@ function loadMainPage() {
       if (target === 'whoami') {
         console.log('whoami');
         whoami();
-      } else if (target === 'project') {
+      } else if (target === 'projects') {
         console.log('project');
         project();
       } else if (target === 'blog') {
@@ -126,7 +131,34 @@ function loadMainPage() {
   });
 }
 
+function loadsMySkills(){
+
+  const contentSkills = document.querySelector('.contentSkills');
+  contentSkills.innerHTML = '';
+
+  //hacking skills
+  const skillsContent = document.createElement('div');
+  skillsContent.classList.add('skillsContent');
+  const skillsH2 = document.createElement('h6');
+  skillsH2.classList.add('press-start-2p-regular');
+  skillsH2.textContent = 'My Skills';
+  const hackingSkills = document.createElement('div');
+  hackingSkills.classList.add('hackingSkills');
+  const hackingSkillsp = document.createElement('p');
+  hackingSkillsp.classList.add('roboto-normal');
+  hackingSkillsp.textContent = 'Hacking Skills';
+  hackingSkills.appendChild(hackingSkillsp);
+  skillsContent.appendChild(skillsH2);
+  skillsContent.appendChild(hackingSkills);
+  contentSkills.appendChild(skillsContent);
+
+  //programming skills
+}
+
 function whoami(){
+  //cleanup skills
+  const contentSkills = document.querySelector('.contentSkills');
+  contentSkills.innerHTML = '';
   //cleanup Whoami links
   //cleanup main
   const main = document.querySelector('section');
@@ -134,7 +166,7 @@ function whoami(){
   const whoH2 = document.createElement('h2');
   whoH2.classList.add('press-start-2p-regular');
   whoH2.classList.add('blink-border')
-  whoH2.textContent = 'Who am I?';
+  whoH2.textContent = 'whoami?';
   const whoP = document.createElement('p');
   whoP.classList.add('roboto-normal');
   whoP.textContent = 'I am an ethical hacker and I love software engineering. I have experience in various programming languages and frameworks. And also as an ethical hacker, I have a strong understanding of security principles and practices. ';
@@ -150,11 +182,19 @@ function whoami(){
   whoHobbiesdiv.appendChild(whoHobbiesH3);
   whoHobbiesdiv.appendChild(whoHobbiesP);
   main.appendChild(whoHobbiesdiv);
+  
+  //load my skills
+  loadsMySkills();
 
+  //load my links
   LoadMyLinks();
-
+  //load footer
+  loadFooter();
 }
 function project(){
+  //cleanup skills
+  const contentSkills = document.querySelector('.contentSkills');
+  contentSkills.innerHTML = '';
   //cleanup Whoami links
   const contentLink = document.querySelector('.contentLink');
   contentLink.innerHTML = ''
@@ -171,8 +211,14 @@ function project(){
   
   main.appendChild(projectH2);
   main.appendChild(projectP);
+
+  //loadFooter
+  loadFooter();
 }
 function blog(){
+  //cleanup skills
+  const contentSkills = document.querySelector('.contentSkills');
+  contentSkills.innerHTML = '';
   //cleanup Whoami links
   const contentLink = document.querySelector('.contentLink');
   contentLink.innerHTML = ''
@@ -184,6 +230,9 @@ function blog(){
   blogH2.classList.add('blink-border')
   blogH2.textContent = 'My Blog';
   main.appendChild(blogH2);
+
+  //loadFooter
+  loadFooter();
 }
 
 function main(){
