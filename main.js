@@ -188,8 +188,6 @@ function whoami(){
 
   //load my links
   LoadMyLinks();
-  //load footer
-  loadFooter();
 }
 function project(){
   //cleanup skills
@@ -212,8 +210,7 @@ function project(){
   main.appendChild(projectH2);
   main.appendChild(projectP);
 
-  //loadFooter
-  loadFooter();
+ 
 }
 function blog(){
   //cleanup skills
@@ -231,8 +228,6 @@ function blog(){
   blogH2.textContent = 'My Blog';
   main.appendChild(blogH2);
 
-  //loadFooter
-  loadFooter();
 }
 
 function main(){
