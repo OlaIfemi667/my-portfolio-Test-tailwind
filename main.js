@@ -131,29 +131,7 @@ function loadMainPage() {
   });
 }
 
-function loadsMySkills(){
 
-  const contentSkills = document.querySelector('.contentSkills');
-  contentSkills.innerHTML = '';
-
-  //hacking skills
-  const skillsContent = document.createElement('div');
-  skillsContent.classList.add('skillsContent');
-  const skillsH2 = document.createElement('h6');
-  skillsH2.classList.add('press-start-2p-regular');
-  skillsH2.textContent = 'My Skills';
-  const hackingSkills = document.createElement('div');
-  hackingSkills.classList.add('hackingSkills');
-  const hackingSkillsp = document.createElement('p');
-  hackingSkillsp.classList.add('roboto-normal');
-  hackingSkillsp.textContent = 'Hacking Skills';
-  hackingSkills.appendChild(hackingSkillsp);
-  skillsContent.appendChild(skillsH2);
-  skillsContent.appendChild(hackingSkills);
-  contentSkills.appendChild(skillsContent);
-
-  //programming skills
-}
 
 function whoami(){
   //cleanup skills
@@ -184,7 +162,6 @@ function whoami(){
   main.appendChild(whoHobbiesdiv);
   
   //load my skills
-  loadsMySkills();
 
   //load my links
   LoadMyLinks();
