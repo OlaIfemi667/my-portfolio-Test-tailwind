@@ -190,7 +190,6 @@ function project(){
 function blog(){
   //cleanup skills
   const contentSkills = document.querySelector('.contentSkills');
-  contentSkills.innerHTML = '';
   //cleanup Whoami links
   const contentLink = document.querySelector('.contentLink');
   contentLink.innerHTML = ''
