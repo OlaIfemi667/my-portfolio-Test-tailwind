@@ -136,7 +136,6 @@ function loadMainPage() {
 function whoami(){
   //cleanup skills
   const contentSkills = document.querySelector('.contentSkills');
-  contentSkills.innerHTML = '';
   //cleanup Whoami links
   //cleanup main
   const main = document.querySelector('section');
@@ -169,7 +168,6 @@ function whoami(){
 function project(){
   //cleanup skills
   const contentSkills = document.querySelector('.contentSkills');
-  contentSkills.innerHTML = '';
   //cleanup Whoami links
   const contentLink = document.querySelector('.contentLink');
   contentLink.innerHTML = ''
